@@ -10,7 +10,7 @@ module.exports = {
 			test: /\.jpg$/,
 			use: {
 				loader: 'file-loader'
-			} 
+			}
 		}]
 	},
 	output: {

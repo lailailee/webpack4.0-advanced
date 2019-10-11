@@ -26,7 +26,7 @@
 ```
 - 编辑`index.js`,引入`avatar,jpg`
 
-```javascript
+```js
 //index.js
 import avatar from './avatar.jpg';
 
@@ -44,7 +44,7 @@ root.append(img);
 
 - JPG文件的加载需要用到`file-loader`这个组件
 
-```javascript
+```js
 //package.json
 {
   "name": "lesson",
@@ -67,7 +67,7 @@ root.append(img);
 ```
 - 相应的`webpack.config.js`的配置
 
-```javascript
+```js
 //webpack.config.js
 const path = require('path');
 
@@ -81,7 +81,7 @@ module.exports = {
 			test: /\.jpg$/,
 			use: {
 				loader: 'file-loader'
-			} 
+			}
 		}]
 	},
 	output: {
@@ -89,7 +89,9 @@ module.exports = {
 		path: path.resolve(__dirname, 'dist')
 	}
 }
+
 ```
+
 - 运行`npm run bundle`打包,得到dist目录
 
 ![image](http://lailailee.oss-cn-chengdu.aliyuncs.com/%E5%8D%9A%E5%AE%A2%E5%9B%BE%E7%89%87/webpack/loader-img/deemo01-04.jpg)
@@ -128,7 +130,7 @@ module.exports = {
 
 #### 1.  需要打包过去的图片名称不变
 
-```javascript
+```js
 //webpack.config.js
 const path = require('path');
 
@@ -169,7 +171,7 @@ module.exports = {
 
 #### 2.需要打包多种类型的图片
 
-```javascript
+```js
 //webpack.config.js
 const path = require('path');
 
@@ -199,7 +201,7 @@ module.exports = {
 
 3.希望将图片打包到一个`images`文件夹里
 
-```javascript
+```js
 //webpack.config.js
 const path = require('path');
 
@@ -236,7 +238,7 @@ module.exports = {
 [>>>url-loader](https://www.webpackjs.com/loaders/url-loader/) (Loads files as base64 encoded URL)
 > url-loader 功能类似于 file-loader，但是在文件大小（单位 byte）低于指定的限制时，可以返回一个 DataURL。
 
-```javascript
+```js
 //package.json
 {
   "name": "lesson",
@@ -259,7 +261,7 @@ module.exports = {
 }
 ```
 - 切换`file-loader`为`url-loader`
-```javascript
+```js
 //webpack.config.js
 const path = require('path');
 
@@ -310,7 +312,7 @@ module.exports = {
 
 相应的配置为
 
-```javascript
+```js
 const path = require('path');
 
 module.exports = {
