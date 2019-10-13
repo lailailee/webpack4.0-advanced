@@ -1,12 +1,12 @@
 {
-  "name": "lesson",
+  "name": "webpack-test",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "bundle": "webpack"
   },
-  "author": "",
+  "author": "lailailee",
   "license": "ISC",
   "devDependencies": {
     "file-loader": "^2.0.0",
